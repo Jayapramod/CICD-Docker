@@ -1,32 +1,32 @@
 # Docker CI/CD Demo
 
-A demonstration of a modern CI/CD pipeline using Node.js, Docker, and GitHub Actions.
+A production-ready continuous integration and deployment pipeline implementation using Node.js, Docker, and GitHub Actions.
 
-## 🚀 Tech Stack
+## Architecture Overview
 
-- **Backend:**
-  - Node.js (v20)
-  - Express.js (v4.18.2)
+### Application Layer
+- Node.js (v20) - Runtime Environment
+- Express.js (v4.18.2) - Web Application Framework
 
-- **Containerization:**
-  - Docker
-  - Docker Compose
-  - Node:20-alpine base image
+### Container Infrastructure
+- Docker - Application Containerization
+- Docker Compose - Multi-container Orchestration
+- Node:20-alpine - Lightweight Base Image
 
-- **CI/CD:**
-  - GitHub Actions
-  - Docker Hub Registry
+### CI/CD Infrastructure
+- GitHub Actions - Automated Pipeline
+- Docker Hub - Container Registry
 
-## 📋 Features
+## Core Features
 
-- Express.js REST API
-- Health Check Endpoint
-- Automated Testing
-- Docker Containerization
-- Automated CI/CD Pipeline
-- Docker Hub Integration
+- RESTful API Implementation with Express.js
+- Comprehensive Health Check System
+- Automated Test Suite
+- Containerized Application Architecture
+- Continuous Integration and Deployment Pipeline
+- Automated Container Registry Integration
 
-## 🏗️ Project Structure
+## Project Architecture
 
 ```
 docker-ci-cd-demo/
@@ -41,12 +41,15 @@ docker-ci-cd-demo/
         └── ci-cd.yml    # GitHub Actions workflow
 ```
 
-## 🛠️ API Endpoints
+## API Documentation
 
-- `GET /` - Main endpoint returning welcome message
-- `GET /healthz` - Health check endpoint returning status
+### Available Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | /        | Main application endpoint - Returns welcome message |
+| GET    | /healthz | Health check endpoint - Returns system status |
 
-## 🚀 Getting Started
+## Implementation Guide
 
 ### Prerequisites
 
@@ -96,37 +99,39 @@ Or using Docker Compose:
 docker-compose up
 ```
 
-## 🔄 CI/CD Pipeline
+## Continuous Integration and Deployment
 
-### Workflow Stages
+### Pipeline Architecture
 
-1. **Build and Push:**
-   - Builds Docker image
-   - Pushes to Docker Hub
-   - Tags with latest and commit SHA
+1. **Build and Registry Phase:**
+   - Docker Image Construction
+   - Registry Publication
+   - Version Control Integration
+   - Automated Tagging System
 
-2. **Container Test:**
-   - Pulls the image
-   - Runs container
-   - Tests API endpoints
+2. **Validation Phase:**
+   - Container Deployment
+   - Runtime Verification
+   - Endpoint Validation
 
-### Automated Tests
+### Automated Quality Assurance
 
 The pipeline automatically tests:
 - Application startup
 - Main endpoint response
 - Health check endpoint
 
-## 🐳 Docker Hub
+## Container Registry Integration
 
-The application is automatically published to Docker Hub.
+The application is automatically published to the Docker Hub registry.
 
-Pull the latest version:
+### Image Retrieval
+To obtain the latest version:
 ```bash
 docker pull jayapramod/docker-ci-cd-demo:latest
 ```
 
-## 💻 Development Workflow
+## Development Process
 
 1. Make changes to the code
 2. Commit and push to main branch
@@ -136,18 +141,18 @@ docker pull jayapramod/docker-ci-cd-demo:latest
    - Runs all tests
    - Reports status
 
-## 🔧 Environment Variables
+## Configuration
 
-- `PORT`: Application port (default: 3000)
+### Environment Variables
+| Variable | Description | Default |
+|----------|-------------|---------|
+| PORT     | Application listening port | 3000 |
 
-## 🤝 Contributing
+## Contributing Guidelines
 
 1. Fork the repository
 2. Create a feature branch
 3. Commit your changes
 4. Push to the branch
 5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License.
+s
